@@ -12,7 +12,12 @@ Handwritten digit recognition is a foundational problem in machine learning and 
 
 ### 2.1 Network Architecture
 
-The neural network consists of three fully-connected layers that follows the [3blue1brown](https://www.youtube.com/watch?v=IHZwWFHWa-w) suggestions for this project:
+<div style="display: grid; place-items: center; height: 200px;">
+  <img width="556" height="723" src="https://github.com/user-attachments/assets/c17aa34e-eea3-4165-a644-27d052cfcb6d" />
+</div>
+
+
+The neural network consists of three fully-connected layers that follow the [3blue1brown](https://www.youtube.com/watch?v=IHZwWFHWa-w) suggestions for this project:
 
 - **Input Layer**: 784 neurons (28×28 pixel images flattened)
 - **Hidden Layer 1**: 16 neurons with sigmoid activation
@@ -59,7 +64,7 @@ $$\frac{\partial L}{\partial \hat{y}} = \frac{2}{m}(\hat{y} - y)$$
 
 ### 2.5 Backpropagation Algorithm
 
-The backpropagation algorithm computes gradients for all weights and biases by chain rule application:
+The backpropagation algorithm computes gradients for all weights and biases by the chain rule application:
 
 1. **Output Layer Gradient**:
 $$\delta^{[L]} = \frac{\partial L}{\partial a^{[L]}} \odot \frac{\partial a^{[L]}}{\partial z^{[L]}}$$
@@ -98,7 +103,7 @@ The MNIST dataset contains:
 - **Validation Set**: 10,000 images
 - **Test Set**: 10,000 images
 
-Images are normalized to [0, 1] range and flattened to 784-dimensional vectors.
+Images are normalized to the [0, 1] range and flattened to 784-dimensional vectors.
 
 ## 3. Implementation Details
 
@@ -124,7 +129,7 @@ main.py           - Main script orchestrating the training process
 - Performs forward propagation
 - Constructs one-hot encoded target vectors
 - Executes backpropagation and parameter updates
-- Returns number of samples processed
+- Returns the number of samples processed
 
 **Validade Class** (`validade.py`):
 - Evaluates network on validation/test sets
@@ -223,7 +228,7 @@ The sigmoid activation with MSE loss was chosen for simplicity. For production s
 
 ## 9. Conclusion
 
-This project successfully demonstrates the implementation of a feedforward neural network for handwritten digit recognition from first principles. With 93.48% test accuracy, the network achieves competitive performance while maintaining code clarity and educational value. The implementation effectively illustrates fundamental concepts in deep learning including forward propagation, backpropagation, loss calculation, and gradient-based optimization.
+This project successfully demonstrates the implementation of a feedforward neural network for handwritten digit recognition from first principles. With 93.48% test accuracy, the network achieves competitive performance while maintaining code clarity and educational value. The implementation effectively illustrates fundamental concepts in deep learning, including forward propagation, backpropagation, loss calculation, and gradient-based optimization.
 
 ---
 
